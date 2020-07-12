@@ -1,0 +1,58 @@
+.weather-container {
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+  h1 {
+    font-size: 60px;
+    font-weight: lighter;
+  }
+  .weather-condition {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    img {
+      border-radius: 10px;
+      height: 40px;
+      width: 40px;
+      margin: 0 5px;
+    }
+    .condition {
+      font-size: 25px;
+    }
+  }
+  .temperature {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: lighter;
+    .temp {
+      font-size: 100px;
+    }
+    .feelslike {
+      color: rgba(255, 255, 255, 0.5);
+      padding-top: 55px;
+      font-size: 50px;
+    }
+  }
+  button {
+    width: 100px;
+    padding: 5px;
+    margin: 10px 8em;
+
+    border: none;
+    outline: none;
+
+    background-color: #2f70b1;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    transition: 0.2s ease-out;
+    &:hover {
+      background-color: transparent;
+      border: 2px solid #2f70b1;
+      transition: 0.2s ease-out;
+    }
+  }
+}

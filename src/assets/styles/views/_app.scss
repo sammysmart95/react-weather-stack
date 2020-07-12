@@ -1,0 +1,43 @@
+.app {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  .background-svg {
+    background-image: linear-gradient(
+      to bottom,
+      rgb(11, 5, 66),
+      rgb(142, 90, 226)
+    );
+    height: 100vh;
+    .weather-svg {
+      .description {
+        color: #fff;
+        padding-top: 5em;
+        margin-left: 5em;
+      }
+      svg {
+        height: 100%;
+        width: 100%;
+        margin: 1em 7px 0;
+      }
+    }
+  }
+  .background-weather {
+    background-image: linear-gradient(
+        to bottom,
+        rgb(11, 5, 66),
+        rgb(142, 90, 226)
+      ),
+      url("../../images/weather.jpg");
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
+    .time {
+      color: #fff;
+      text-align: end;
+    }
+    .date {
+      color: #fff;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.details-container {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(11, 5, 66),
+    rgb(142, 90, 226)
+  );
+  height: 100vh;
+  color: #fff;
+  h1 {
+    span {
+      color: #3cbbff;
+    }
+  }
+}
