@@ -9,7 +9,7 @@ import Weather from "./views/Weather";
 
 const Home = () => {
   let apiKey = process.env.REACT_APP_STACK_API_KEY;
-  let baseURL = `http://api.weatherstack.com/current?access_key=${apiKey}&query=`;
+  let baseURL = `https://api.weatherstack.com/current?access_key=${apiKey}&query=`;
 
   const [searchValue, setSearchValue] = useState("");
   const [currentWeather, setCurrentWeather] = useState(null);

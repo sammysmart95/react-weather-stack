@@ -5,7 +5,7 @@ import axios from "axios";
 
 const Details = (props) => {
     let apiKey = process.env.REACT_APP_STACK_API_KEY;
-    let baseURL = `http://api.weatherstack.com/current?access_key=${apiKey}&query=`;
+    let baseURL = `https://api.weatherstack.com/current?access_key=${apiKey}&query=`;
     const [weatherDetails, setWeatherDetails] = useState(null);
 
     const getWeather = () => {
