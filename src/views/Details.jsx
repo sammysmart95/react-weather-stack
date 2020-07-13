@@ -5,7 +5,7 @@ import axios from "axios";
 
 const Details = (props) => {
     let apiKey = process.env.REACT_APP_STACK_API_KEY;
-    let baseURL = `https://api.weatherstack.com/current?access_key=${apiKey}&query=`;
+    let baseURL = `http://api.weatherstack.com/current?access_key=${apiKey}&query=`;
     const [weatherDetails, setWeatherDetails] = useState(null);
 
     const getWeather = () => {
@@ -38,8 +38,8 @@ const Details = (props) => {
             <div>
                 <h1> Weather info for <span>{weatherDetails?.results?.location?.name}, {weatherDetails?.results?.location?.country}</span></h1>
                 <Link to='/' className='go-home'>Go Home</Link>
-                <div className='row'>
-                    <div className='col-md-4'>
+                <div className='row details'>
+                    <div className='col-md-4 details-content'>
                         {/* <div>svg</div> */}
                         <h3>Temperature</h3>
                         <div>{weatherDetails?.results?.current?.temperature} &#176;</div>

@@ -6,9 +6,26 @@
   );
   height: 100vh;
   color: #fff;
+  padding: 3em 7em;
   h1 {
     span {
       color: #3cbbff;
+    }
+  }
+  .go-home {
+    text-decoration: none;
+    &:hover {
+      color: #fff;
+      transition: 0.3s ease-out;
+    }
+    .details {
+      margin: 3em 0;
+      .details-content {
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        background-color: #fff;
+      }
     }
   }
 }
