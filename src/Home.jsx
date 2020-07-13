@@ -86,7 +86,7 @@ const Home = () => {
     }
   };
   return (
-    <div className="app">
+    <div className="home">
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-6 background-svg">
