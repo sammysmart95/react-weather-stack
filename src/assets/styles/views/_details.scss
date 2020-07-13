@@ -6,7 +6,7 @@
   );
   height: 100vh;
   color: #fff;
-  padding: 3em 7em;
+  padding: 3em 5em;
   h1 {
     span {
       color: #3cbbff;
@@ -14,18 +14,31 @@
   }
   .go-home {
     text-decoration: none;
+    color: #3cbbff;
+
     &:hover {
       color: #fff;
       transition: 0.3s ease-out;
     }
-    .details {
-      margin: 3em 0;
-      .details-content {
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        background-color: #fff;
+  }
+  .details {
+    margin: 15px 0;
+    .details-content {
+      padding: 0;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.2);
+      height: 15em;
+      svg {
+        height: 25%;
+        width: 25%;
+        margin: 10px;
       }
+      .text {
+        font-size: 20px;
+      }
+    }
+    .single {
+      padding-top: 20px;
     }
   }
 }

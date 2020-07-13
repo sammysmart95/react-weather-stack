@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import axios from "axios";
+import Icons from '../assets/svg/Icons'
 
 
 const Details = (props) => {
@@ -39,38 +40,56 @@ const Details = (props) => {
                 <h1> Weather info for <span>{weatherDetails?.results?.location?.name}, {weatherDetails?.results?.location?.country}</span></h1>
                 <Link to='/' className='go-home'>Go Home</Link>
                 <div className='row details'>
-                    <div className='col-md-4 details-content'>
-                        {/* <div>svg</div> */}
-                        <h3>Temperature</h3>
-                        <div>{weatherDetails?.results?.current?.temperature} &#176;</div>
+                    <div className='col-md-4 col-lg-4 '>
+                        <div className='details-content '>
+                            <div className='single'>  <Icons.Temperature /></div>
+                            <h3>Temperature</h3>
+                            <div className='text'>
+                                {weatherDetails?.results?.current?.temperature}&#176;</div>
+                        </div>
                     </div>
-                    <div className='col-md-4'>
-                        <h3>Timezone</h3>
-                        <div>{weatherDetails?.results?.location?.timezone_id}</div>
-                        <br />
-                        <h3>Local Time</h3>
-                        <div>{weatherDetails?.results?.location?.localtime}</div>
+                    <div className='col-md-4 '>
+                        <div className='details-content'>
+                            <Icons.Time />
+                            <h3>Timezone</h3>
+                            <div className='text'>{weatherDetails?.results?.location?.timezone_id}</div>
+
+                            <h3>Local Time</h3>
+                            <div className='text'>{weatherDetails?.results?.location?.localtime}</div>
+                        </div>
                     </div>
-                    <div className='col-md-4'>
-                        <h3>Wind Speed</h3>
-                        <div>{weatherDetails?.results?.current?.wind_speed} kmph </div>
-                        <br />
-                        <h3>Wind Direction</h3>
-                        <div>{weatherDetails?.results?.current?.wind_degree}  {weatherDetails?.results?.current?.wind_dir}</div>
+                    <div className='col-md-4 '>
+                        <div className='details-content'>
+                            <Icons.Wind />
+                            <h3>Wind Speed</h3>
+                            <div className='text'>{weatherDetails?.results?.current?.wind_speed} kmph </div>
+
+                            <h3>Wind Direction</h3>
+                            <div className='text'>{weatherDetails?.results?.current?.wind_degree}  {weatherDetails?.results?.current?.wind_dir}</div>
+                        </div>
                     </div>
                 </div>
-                <div className='row'>
-                    <div className='col-md-4'>
-                        <h3>Pressure</h3>
-                        <div>{weatherDetails?.results?.current?.pressure} Millbar</div>
+                <div className='row details'>
+                    <div className='col-md-4 '>
+                        <div className='details-content'>
+                            <div className='single'><Icons.Pressure /></div>
+                            <h3>Pressure</h3>
+                            <div>{weatherDetails?.results?.current?.pressure} Millbar</div>
+                        </div>
                     </div>
-                    <div className='col-md-4'>
-                        <h3>Humidity</h3>
-                        <div>{weatherDetails?.results?.current?.humidity} %</div>
+                    <div className='col-md-4 '>
+                        <div className='details-content'>
+                            <div className='single'><Icons.Humidity /></div>
+                            <h3>Humidity</h3>
+                            <div className='text'>{weatherDetails?.results?.current?.humidity}%</div>
+                        </div>
                     </div>
-                    <div className='col-md-4'>
-                        <h3>Cloud Cover</h3>
-                        <div>{weatherDetails?.results?.current?.cloudcover} %</div>
+                    <div className='col-md-4 '>
+                        <div className='details-content'>
+                            <div className='single'> <Icons.Weather /></div>
+                            <h3>Cloud Cover</h3>
+                            <div className='text'>{weatherDetails?.results?.current?.cloudcover}%</div>
+                        </div>
                     </div>
                 </div>
 
