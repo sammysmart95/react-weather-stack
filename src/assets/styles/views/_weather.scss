@@ -59,8 +59,18 @@
 
 @media only screen and (max-width: 768px) {
   .weather-container {
-    color: #fff;
-    text-align: center;
-    padding: 30px;
+    padding: 50px 30px;
+    h1 {
+      font-size: 60px;
+      font-weight: lighter;
+    }
+    .weather-condition {
+      .condition {
+        font-size: 25px;
+      }
+    }
+    button {
+      margin: 50px 0;
+    }
   }
 }

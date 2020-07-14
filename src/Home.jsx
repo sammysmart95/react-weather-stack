@@ -89,7 +89,7 @@ const Home = () => {
     <div className="home">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-6 background-svg">
+          <div className="col-md-6 col-sm-12 background-svg">
             <div className="weather-svg">
               <div className="description">
                 <h2>Weather Cheacker</h2>
@@ -101,7 +101,7 @@ const Home = () => {
               <WeatherSvg />
             </div>
           </div>
-          <div className="col-md-6 background-weather">
+          <div className="col-md-6 col-sm-12 background-weather">
             <div className="time">
               <Time />
             </div>

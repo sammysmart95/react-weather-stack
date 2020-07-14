@@ -46,12 +46,18 @@
   .home {
     height: 100vh;
     width: 100vw;
-    .background-svg {
-      display: none;
-    }
-    .background-weather {
-      height: 100vh;
-      width: 100vw;
+    .container-fluid {
+      padding: 0;
+      .row {
+        margin: 0;
+        .background-svg {
+          display: none;
+        }
+        .background-weather {
+          height: 100vh;
+          width: 100vw;
+        }
+      }
     }
   }
 }
