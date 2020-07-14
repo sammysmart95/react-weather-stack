@@ -5,10 +5,13 @@ import Icons from '../assets/svg/Icons'
 
 
 const Details = (props) => {
+    // My api key and the api base url
     let apiKey = process.env.REACT_APP_STACK_API_KEY;
     let baseURL = `http://api.weatherstack.com/current?access_key=${apiKey}&query=`;
     const [weatherDetails, setWeatherDetails] = useState(null);
 
+
+    // This function  get the current weather of the searched location and render the details for the weather
     const getWeather = () => {
         axios
             .get(baseURL + props.match.params.location)
@@ -27,13 +30,12 @@ const Details = (props) => {
             });
     };
 
+    // This render the details component once the details button is clicked....
     useEffect(() => {
         getWeather()
     }, [])
 
-    useEffect(() => {
-        console.log(weatherDetails)
-    }, [weatherDetails])
+
     return (
         <div className='details-container'>
             <div>
@@ -53,7 +55,6 @@ const Details = (props) => {
                             <Icons.Time />
                             <h3>Timezone</h3>
                             <div className='text'>{weatherDetails?.results?.location?.timezone_id}</div>
-
                             <h3>Local Time</h3>
                             <div className='text'>{weatherDetails?.results?.location?.localtime}</div>
                         </div>
@@ -63,7 +64,6 @@ const Details = (props) => {
                             <Icons.Wind />
                             <h3>Wind Speed</h3>
                             <div className='text'>{weatherDetails?.results?.current?.wind_speed} kmph </div>
-
                             <h3>Wind Direction</h3>
                             <div className='text'>{weatherDetails?.results?.current?.wind_degree}  {weatherDetails?.results?.current?.wind_dir}</div>
                         </div>
@@ -92,7 +92,6 @@ const Details = (props) => {
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     )

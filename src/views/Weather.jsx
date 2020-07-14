@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Animate from '../components/Animate'
 import { Link } from 'react-router-dom'
 
+
+// This functions gets the weather state from the home page and render it.
+
 const Weather = ({ currentWeather }) => {
-    useEffect(() => {
-        console.log(currentWeather);
-    }, [currentWeather]);
     return (
         <div className='weather-container'>
             <h1>{currentWeather?.results?.location?.name}</h1>
